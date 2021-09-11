@@ -1,6 +1,6 @@
-var operandoa;
-var operandob;
-var operacion;
+var operacion1;
+var operacion2;
+var calculo;
 
 function init(){
     var resultado = document.getElementById("resultado");
@@ -57,27 +57,27 @@ reset.onclick = function(e){
     resetear();
 }
 suma.onclick = function(e){
-    operandoa = resultado.textContent;
-    operacion = "+";
+    operacion1 = resultado.textContent;
+    calculo = "+";
     limpiar();
 }
 resta.onclick = function(e){
-    operandoa = resultado.textContent;
-    operacion = "-";
+    operacion1 = resultado.textContent;
+    calculo = "-";
     limpiar();
 }
 multiplicacion.onclick = function(e){
-    operandoa = resultado.textContent;
-    operacion = "*";
+    operacion1 = resultado.textContent;
+    calculo = "*";
     limpiar();
 }
 division.onclick = function(e){
-    operandoa = resultado.textContent;
-    operacion = "/";
+    operacion1 = resultado.textContent;
+    calculo = "/";
     limpiar();
 }
 igual.onclick = function(e){
-    operandob = resultado.textContent;
+    operacion2 = resultado.textContent;
     resolver();
 }
 
@@ -86,25 +86,25 @@ function limpiar(){
   }
   function resetear(){
     resultado.textContent = "";
-    operandoa = 0;
-    operandob = 0;
-    operacion = "";
+    operacion1 = 0;
+    operacion2 = 0;
+    calculo = "";
   }
 
   function resolver(){
     var res = 0;
-    switch(operacion){
+    switch(calculo){
       case "+":
-        res = parseFloat(operandoa) + parseFloat(operandob);
+        res = parseFloat(operacion1) + parseFloat(operacion2);
         break;
       case "-":
-          res = parseFloat(operandoa) - parseFloat(operandob);
+          res = parseFloat(operacion1) - parseFloat(operacion2);
           break;
       case "*":
-        res = parseFloat(operandoa) * parseFloat(operandob);
+        res = parseFloat(operacion1) * parseFloat(operacion2);
         break;
       case "/":
-        res = parseFloat(operandoa) / parseFloat(operandob);
+        res = parseFloat(operacion1) / parseFloat(operacion2);
         break;
     }
     resetear();
