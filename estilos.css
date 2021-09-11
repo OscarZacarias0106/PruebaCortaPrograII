@@ -13,6 +13,9 @@
     height: 70px;
     font-size: 25px;
   }
+#h2{
+    text-align: center;
+}
 
   #resultado{
     display:block;
