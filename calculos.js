@@ -92,21 +92,21 @@ function limpiar(){
   }
 
   function resolver(){
-    var res = 0;
+    var restablecer = 0;
     switch(calculo){
       case "+":
-        res = parseFloat(operacion1) + parseFloat(operacion2);
+        restablecer = parseFloat(operacion1) + parseFloat(operacion2);
         break;
       case "-":
-          res = parseFloat(operacion1) - parseFloat(operacion2);
+          restablecer = parseFloat(operacion1) - parseFloat(operacion2);
           break;
       case "*":
-        res = parseFloat(operacion1) * parseFloat(operacion2);
+        restablecer = parseFloat(operacion1) * parseFloat(operacion2);
         break;
       case "/":
-        res = parseFloat(operacion1) / parseFloat(operacion2);
+        restablecer = parseFloat(operacion1) / parseFloat(operacion2);
         break;
     }
     resetear();
-    resultado.textContent = res;
+    resultado.textContent = restablecer;
   }
